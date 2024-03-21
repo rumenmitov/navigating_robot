@@ -8,7 +8,7 @@ static int rotation_motor = 2;
 static int engine_motor = 3;
 
 void setup()
-{:";::;:"
+{
   Serial.begin(9600);
   pinMode(trig, OUTPUT);
   pinMode(echo, INPUT);
@@ -32,7 +32,7 @@ void loop()
   	digitalWrite(rotation_motor, HIGH);
     delay(1500);
     digitalWrite(rotation_motor, LOW);
-    serial.write(1);
+    serial.write(1);//Writing 1 to python to plot rotation
   }
   else{
     serial.write(0);
