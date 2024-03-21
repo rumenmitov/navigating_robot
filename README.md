@@ -10,7 +10,7 @@ Here is how to make an obstacle detecting/avoiding simple robot using ultrasonic
 
 Now assemble the circuit:
 ![](assets/circuit.png)
-![](assets/schematics.png)  
+![](assets/schematics.png){width=500px}  
   
 Here is the arduino code in C++:
 ```cpp
