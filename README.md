@@ -50,7 +50,7 @@ void loop()
   	delay(500);
 }
 ```
-Here is the arduino code in C++:
+Here is the python code for the path graphing feature along with the implementation of the sound:
 ```python
 
 ```
