@@ -1,5 +1,7 @@
 import serial
 import math
+import matplotlib.pyplot as plt
+import time
 
 ser = serial.Serial('/dev/ttyACM0', 9600)
 
@@ -7,6 +9,9 @@ position = {
     "x": 0.0,
     "y": 0.0
 }
+
+path_x = [position["x"]]
+path_y = [position["y"]]
 
 
 def normalize(position):
@@ -46,4 +51,9 @@ if __name__ == "__main__":
         position["x"] += position["x"] / magnitude
         position["y"] += position["y"] / magnitude
 
-        print(position)
+        path_x.append(position["x"])
+        path_y.append(position["y"])
+
+        plt.plot(path_x, path_y)
+
+        time.sleep(1)
