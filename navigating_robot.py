@@ -2,6 +2,7 @@ import serial
 import math
 import matplotlib.pyplot as plt
 import time
+import playsound
 
 ser = serial.Serial('/dev/ttyACM0', 9600)
 
@@ -46,6 +47,7 @@ if __name__ == "__main__":
 
         if (data == 1):
             position = rotate(position, math.pi / 6)
+            playsound.playsound("./assets/wow.m4a", True)
 
         magnitude = normalize(position)
         position["x"] += position["x"] / magnitude
@@ -53,6 +55,7 @@ if __name__ == "__main__":
 
         path_x.append(position["x"])
         path_y.append(position["y"])
+
 
         plt.plot(path_x, path_y)
 
