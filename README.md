@@ -5,7 +5,7 @@
 ✅`pip3 install -r requirements.txt`   
 
 ## Usage
-1. Connect your Arduino and mount to */dev/ttyACM0*  
+1. Connect your Arduino and mount to **/dev/ttyACM0**  
 2. `python3 main.py`
 
 ### Arduino Code
